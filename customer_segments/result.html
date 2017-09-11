@@ -19267,7 +19267,7 @@ Index of points considered as outliers, and removed: [65, 66, 128, 154, 75]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
@@ -19626,11 +19626,17 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Variance explained by first and second principal component =  <strong>0.7068</strong></p>
 <p>Variance explained by first four components = <strong>0.9311</strong></p>
-<p><strong>Dimension 1</strong> - Explains most variance. <em>Detergents_Paper</em> has the maximum absolute magnitude of weight. But, <em>Fresh and Frozen</em> have received a positive weight in the <em>Dimension 1</em>.</p>
-<p><strong>Dimension 2</strong> - Secone principal component. Gives all the features a negative weight, with <em>fresh and frozen</em> having the highest absolute magnitude.</p>
-<p><strong>Dimension 3</strong> - Gives the highest absolute magnitude of weight (also highest positive) to <em>Fresh</em>.</p>
-<p><strong>Dimension 4</strong> - Gives the highest absolute magnitude of weight to <em>Frozen</em> followed by <em>Delicatessen and Fresh</em>.</p>
-<p>The high absolute magnitudes of weights of <em>Fresh, Frozen, Milk and Grocery</em> in Dimension 1 and 2 might be able to distinguish between <em>restaurants from other types of customers</em>.</p>
+<p>The absolute sign <em>(-ve or +ve)</em> does not matter here; because, if we multiply everything with -1, the principal components will still remain the <em>same</em>. Therefore, we would look at the <em>magnitude</em> of weight of each feature.</p>
+<p>Now, suppose we consider a feature is of importance if its weight is more than a certain threshold (say 0.3).</p>
+<p><strong>Dimension 1</strong> - From the plot above, we can see that the first principal component is strongly related with <em>Milk, Grocery and Detergents_Paper</em>. This component indeed explains ~45% of the variance.</p>
+<p><strong>Dimension 2</strong> - The second principal component is highly correlated with <em>Fresh, Frozen and Delicatessen</em>. The first and second principal component together explains about 70% of the variance in the data.</p>
+<ul>
+<li>We can also observe that from the first principal component (dimension 1), we can distinguish <em>Restaurants/Cafe</em> from other types of customers, given the high weightage of <em>Milk, Grocery and Detergents_Paper</em></li>
+<li>Also, the second principal component, we could distinguish <em>Retailers</em> from other customers, given the high weightage of <em>Fresh, Frozen and Delicatessen</em></li>
+</ul>
+<p><strong>Dimension 3</strong> - This again shows correlation to <em>Fresh, Frozen and Delicatessen</em>. But, it explains less variance when compared to the second principal components.</p>
+<p><strong>Dimension 4</strong> - Highly correlated with <em>Frozen and Delicatessen</em>. This might also suggest that more the spendings on <em>Frozen</em>, more the customer is to spend on <em>Delicatessen</em>.</p>
+<p>When all these 4 components are combined, they explain about 93% of the variance in the data.</p>
 
 </div>
 </div>
@@ -19646,7 +19652,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -19744,7 +19750,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Apply PCA by fitting the good data with only two dimensions</span>
@@ -19777,7 +19783,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -19859,7 +19865,7 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -19876,13 +19882,13 @@ CyZJkiRJ6rBgkiRJkqSO/wUmsGpjgOjg6AAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[24]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1c0868ee4e0&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2b243af0400&gt;</pre>
 </div>
 
 </div>
@@ -21045,7 +21051,7 @@ TkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="k">import</span> <span class="n">GaussianMixture</span>
@@ -21139,7 +21145,7 @@ Number of mixture components = 15 --&gt; Silhouette Score = 0.28974104140589224
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Assigning the best value to n_components for visualization</span>
@@ -21812,7 +21818,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Inverse transform the centers</span>
@@ -21901,7 +21907,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">true_centers</span> <span class="o">=</span> <span class="n">true_centers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;50%&#39;</span><span class="p">])</span>
@@ -21918,13 +21924,13 @@ AAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1c086f36c50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2b24407ae48&gt;</pre>
 </div>
 
 </div>
@@ -22188,7 +22194,7 @@ gg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -22223,7 +22229,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Original Samples of data</span>
@@ -22397,7 +22403,7 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
