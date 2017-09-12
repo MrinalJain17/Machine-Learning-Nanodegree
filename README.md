@@ -10,3 +10,5 @@ View `Jupyter Notebooks` :
 2. [Boston Housing](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/boston_housing/boston_housing.ipynb)
 
 3. [Finding Donors for Charity](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/finding_donors/finding_donors.ipynb)
+
+4. [Creating Customer Segments](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb)
