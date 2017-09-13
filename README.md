@@ -11,4 +11,4 @@ View `Jupyter Notebooks` :
 
 3. [Finding Donors for Charity](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/finding_donors/finding_donors.ipynb)
 
-4. [Creating Customer Segments](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb)
+4. [Creating Customer Segments for a Wholesale Distributor](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb)
