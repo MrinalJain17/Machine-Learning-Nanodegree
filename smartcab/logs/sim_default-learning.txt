@@ -1,0 +1,148 @@
+/-----------------------------------------
+| State-action rewards from Q-Learning
+\-----------------------------------------
+
+(('waypoint', 'forward'), ('light', 'red'), ('oncoming', 'left'))
+ -- forward : -7.65
+ -- right : -4.28
+ -- None : 1.51
+ -- left : -8.68
+
+(('waypoint', 'forward'), ('light', 'green'), ('oncoming', 'left'))
+ -- forward : 1.52
+ -- right : 0.01
+ -- None : -2.10
+ -- left : 0.09
+
+(('waypoint', 'left'), ('light', 'red'), ('oncoming', 'left'))
+ -- forward : -8.62
+ -- right : -4.50
+ -- None : 1.63
+ -- left : -9.96
+
+(('waypoint', 'left'), ('light', 'green'), ('oncoming', 'right'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : -2.77
+ -- left : 1.16
+
+(('waypoint', 'left'), ('light', 'red'), ('oncoming', 'forward'))
+ -- forward : -4.61
+ -- right : 0.26
+ -- None : 1.21
+ -- left : -7.83
+
+(('waypoint', 'forward'), ('light', 'green'), ('oncoming', None))
+ -- forward : 2.37
+ -- right : 0.02
+ -- None : -2.48
+ -- left : 0.42
+
+(('waypoint', 'left'), ('light', 'red'), ('oncoming', None))
+ -- forward : -17.07
+ -- right : 0.77
+ -- None : 2.08
+ -- left : -34.53
+
+(('waypoint', 'left'), ('light', 'green'), ('oncoming', None))
+ -- forward : 0.06
+ -- right : 0.59
+ -- None : -4.76
+ -- left : 1.75
+
+(('waypoint', 'right'), ('light', 'red'), ('oncoming', 'forward'))
+ -- forward : -7.70
+ -- right : 1.58
+ -- None : 0.00
+ -- left : 0.00
+
+(('waypoint', 'right'), ('light', 'green'), ('oncoming', 'forward'))
+ -- forward : 1.25
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('waypoint', 'left'), ('light', 'green'), ('oncoming', 'left'))
+ -- forward : 0.69
+ -- right : 0.00
+ -- None : -2.21
+ -- left : 1.53
+
+(('waypoint', 'forward'), ('light', 'red'), ('oncoming', 'forward'))
+ -- forward : 0.00
+ -- right : -9.79
+ -- None : 0.00
+ -- left : -5.46
+
+(('waypoint', 'forward'), ('light', 'red'), ('oncoming', 'right'))
+ -- forward : 0.00
+ -- right : 1.23
+ -- None : 0.00
+ -- left : 0.00
+
+(('waypoint', 'right'), ('light', 'red'), ('oncoming', None))
+ -- forward : -12.59
+ -- right : 0.02
+ -- None : 0.37
+ -- left : -9.57
+
+(('waypoint', 'right'), ('light', 'green'), ('oncoming', None))
+ -- forward : 0.77
+ -- right : 1.91
+ -- None : -5.15
+ -- left : 0.19
+
+(('waypoint', 'forward'), ('light', 'green'), ('oncoming', 'right'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.00
+
+(('waypoint', 'right'), ('light', 'green'), ('oncoming', 'left'))
+ -- forward : 0.00
+ -- right : 1.41
+ -- None : -3.44
+ -- left : 0.28
+
+(('waypoint', 'right'), ('light', 'red'), ('oncoming', 'left'))
+ -- forward : -5.49
+ -- right : 2.25
+ -- None : 0.00
+ -- left : -5.25
+
+(('waypoint', 'right'), ('light', 'red'), ('oncoming', 'right'))
+ -- forward : -20.43
+ -- right : -9.79
+ -- None : 0.94
+ -- left : 0.00
+
+(('waypoint', 'forward'), ('light', 'red'), ('oncoming', None))
+ -- forward : -9.35
+ -- right : 0.69
+ -- None : 2.12
+ -- left : -7.67
+
+(('waypoint', 'forward'), ('light', 'green'), ('oncoming', 'forward'))
+ -- forward : 1.75
+ -- right : 0.19
+ -- None : 0.00
+ -- left : 0.29
+
+(('waypoint', 'left'), ('light', 'green'), ('oncoming', 'forward'))
+ -- forward : 0.00
+ -- right : 0.38
+ -- None : -2.55
+ -- left : 1.22
+
+(('waypoint', 'right'), ('light', 'green'), ('oncoming', 'right'))
+ -- forward : 0.00
+ -- right : 0.00
+ -- None : 0.00
+ -- left : 0.03
+
+(('waypoint', 'left'), ('light', 'red'), ('oncoming', 'right'))
+ -- forward : 0.00
+ -- right : 0.47
+ -- None : 2.11
+ -- left : -19.51
+
