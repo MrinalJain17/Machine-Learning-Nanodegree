@@ -44,10 +44,10 @@ class LearningAgent(Agent):
         else:
             self.trials += 1
             # self.epsilon -= 0.05                                                            # For default-learning
-            # self.epsilon = 1.0 / (self.trials * self.trials)                                # tolerance = 0.00005, alpha = 0.01
-            # self.epsilon = 0.8 ** self.trials                                               # tolerance = 0.000001, alpha = 0.005
-            # self.epsilon = math.exp(-1 * self.alpha * self.trials)                          # tolerance = 0.15, alpha = 0.01
-            self.epsilon = math.fabs(math.cos(self.alpha * self.trials))                    # tolerance = 0.01, alpha = 0.01
+            # self.epsilon = 1.0 / (self.trials * self.trials)                                # tolerance = 0.000025, alpha = 0.3
+            # self.epsilon = self.alpha ** self.trials                                        # tolerance = 0.000035, alpha = 0.95
+            # self.epsilon = math.exp(-1 * self.alpha * self.trials)                          # tolerance = 0.000045, alpha = 0.05
+            self.epsilon = math.fabs(math.cos(0.01 * self.trials))                          # tolerance = 0.01, alpha = 0.1
             
         return None
 
@@ -67,7 +67,7 @@ class LearningAgent(Agent):
         # With the hand-engineered features, this learning process gets entirely negated.
         
         # Set 'state' as a tuple of relevant data for the agent        
-        state = (('waypoint', waypoint), ('light', inputs['light']), ('oncoming', inputs['oncoming']))
+        state = (('waypoint', waypoint), ('light', inputs['light']), ('oncoming', inputs['oncoming']), ('left', inputs['left']))
 
         return state
 
@@ -171,7 +171,7 @@ def run():
     #    * alpha   - continuous value for the learning rate, default is 0.5
     # agent = env.create_agent(LearningAgent)                                            # For no-learning
     # agent = env.create_agent(LearningAgent, learning=True)                             # For default-learning
-    agent = env.create_agent(LearningAgent, learning=True, epsilon=1.0, alpha=0.01)      # For optimized-learning
+    agent = env.create_agent(LearningAgent, learning=True, epsilon=1.0, alpha=0.1)      # For optimized-learning
     
     ##############
     # Follow the driving agent
@@ -195,7 +195,7 @@ def run():
     #   tolerance  - epsilon tolerance before beginning testing, default is 0.05 
     #   n_test     - discrete number of testing trials to perform, default is 0
     # sim.run(n_test=10)                                                                 # For default-learnings
-    sim.run(tolerance=0.01, n_test=100)                                                # For optimized-learning
+    sim.run(tolerance=0.1, n_test=100)                                                # For optimized-learning
 
 if __name__ == '__main__':
     run()
