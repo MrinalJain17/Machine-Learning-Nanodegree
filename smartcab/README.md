@@ -17,7 +17,7 @@ Result
 - The smart cab got an 'A+' rating in terms of Safety, meaning that it did not commit any traffic violations.
 - In terms of Reliability, the cab got a rating of 'A', indicating that it reached its destination on time for at least 90% of the trips.
 
-![Visualization of the Outcome](/outcome.PNG)
+![Visualization of the Outcome](outcome.PNG)
 
 Instructions to Execute
 --------------------------------
