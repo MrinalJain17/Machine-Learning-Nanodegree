@@ -14,3 +14,5 @@ View `Jupyter Notebooks` :
 4. [Creating Customer Segments for a Wholesale Distributor](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/customer_segments/customer_segments.ipynb)
 
 5. [Train a Smartcab to drive](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/smartcab/smartcab.ipynb)
+
+6. [Dog Breed Classifier](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/dog-project/dog_app.ipynb)
