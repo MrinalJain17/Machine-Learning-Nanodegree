@@ -38,8 +38,38 @@ All the videos were captured at *25fps* frame rate. Each video has a spatial res
 
 #### Additional Libraries:
 - [Scikit-video](http://www.scikit-video.org/stable/)
-- [Tensorflow](https://www.tensorflow.org/install/)
-- [Keras](https://keras.io/#installation)
-- [tqdm](https://pypi.python.org/pypi/tqdm#installation)
 
-Follow the instructions given in order to install the additional libraries. These libraries will be required for successful execution of the project files.
+```
+	pip install sk-video
+```
+Also, install `FFmpeg` on your machine
+
+For **Linux**:
+
+```
+	$ sudo apt-get update
+	$ sudo apt-get install libav-tools
+```
+
+For **Windows or MAC/OSX**:  
+Download the required binaries from [here](https://www.ffmpeg.org/download.html). Extract the zip file and add the location of binaries to the `PATH` variable
+
+- [Tensorflow](https://www.tensorflow.org/install/)
+
+```
+	pip install tensorflow
+```
+For GPU support or a custom installation, follow the instructions given on the Tensorflow website.
+
+- [Keras](https://keras.io/#installation)
+
+```
+	pip install keras
+```
+- [tqdm](https://pypi.python.org/pypi/tqdm#installation) - Required for displaying the progress bar.
+
+```
+	pip install tqdm
+```
+
+These libraries will be required for successful execution of the project files.
