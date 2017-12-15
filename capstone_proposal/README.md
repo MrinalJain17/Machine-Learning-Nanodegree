@@ -13,7 +13,7 @@ Recognizing human activities using Deep Learning
 
 There are a total of 599 videos, with each category having 100 videos (with the exception of `Handclapping` having 99 videos).
 
-All the videos were captured at *25fps* frame rate. Each video has a spatial resolution of 120x160 pixels.
+All the videos were captured at *25fps* frame rate. Each video has a spatial resolution of 160x120 pixels.
 
 ## Instructions
 1. Clone the repository and navigate to the downloaded folder.
