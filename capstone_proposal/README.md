@@ -20,14 +20,15 @@ All the videos were captured at *25fps* frame rate. Each video has a spatial res
 
 	```
 		git clone https://github.com/MrinalJain17/Machine-Learning-Nanodegree.git
-		cd Human-Activity-Recognition/capstone_proposal
+		cd Machine-Learning-Nanodegree/capstone_proposal
 	```
 2. Unzip the compressed data files and store in the format as mentioned [here](https://github.com/MrinalJain17/Machine-Learning-Nanodegree/blob/master/capstone_proposal/Directory%20Structure%20for%20Data.txt)
 	- Use the helper function `download_files()` present in `data_utils.py` as follows to do this in your current working directory automatically. (The function will delete the compressed files after they are successfully extracted)
 
 	```python
-		>>> import data_utils
-		>>> data_utils.download_files()
+		import data_utils
+		
+		data_utils.download_files()
 	```
 3. The following file is corrupted which gives an error when being loaded. **Delete it before proceeding**.
 
@@ -36,40 +37,38 @@ All the videos were captured at *25fps* frame rate. Each video has a spatial res
 ## Requirements
 `Python 3.x` (preferably from the [Anaconda Distribution](https://www.anaconda.com/download/))
 
-#### Additional Libraries:
-- [Scikit-video](http://www.scikit-video.org/stable/)
-
-```
-	pip install sk-video
-```
-Also, install `FFmpeg` on your machine
+Install `FFmpeg` on your machine
 
 For **Linux**:
 
-```
-	$ sudo apt-get update
-	$ sudo apt-get install libav-tools
-```
+		$ sudo apt-get update
+		$ sudo apt-get install libav-tools
 
 For **Windows or MAC/OSX**:  
 Download the required binaries from [here](https://www.ffmpeg.org/download.html). Extract the zip file and add the location of binaries to the `PATH` variable
 
+### Additional Libraries:
+
+- [Scikit-video](http://www.scikit-video.org/stable/)
+
+	```
+		pip install sk-video
+	```
+
 - [Tensorflow](https://www.tensorflow.org/install/)
 
-```
-	pip install tensorflow
-```
-For GPU support or a custom installation, follow the instructions given on the Tensorflow website.
+	```
+		pip install tensorflow
+	```
+	For GPU support or a custom installation, follow the instructions given on the Tensorflow website.
 
 - [Keras](https://keras.io/#installation)
 
-```
-	pip install keras
-```
+	```
+		pip install keras
+	```
 - [tqdm](https://pypi.python.org/pypi/tqdm#installation) - Required for displaying the progress bar.
 
-```
-	pip install tqdm
-```
-
-These libraries will be required for successful execution of the project files.
+	```
+		pip install tqdm
+	```
