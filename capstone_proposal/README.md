@@ -1,5 +1,6 @@
 # Human-Activity-Recognition
-Recognizing human activities using Deep Learning
+Recognizing human activities using Deep Learning  
+[`Go to the Project Repository`](https://github.com/MrinalJain17/Human-Activity-Recognition)
 
 ## Dataset
 [Recognition of Human Actions](http://www.nada.kth.se/cvap/actions/)

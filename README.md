@@ -16,3 +16,5 @@ View `Jupyter Notebooks` :
 5. [Train a Smartcab to drive](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/smartcab/smartcab.ipynb)
 
 6. [Dog Breed Classifier](http://nbviewer.jupyter.org/github/MrinalJain17/Machine-Learning-Nanodegree/blob/master/dog-project/dog_app.ipynb)
+
+7. [Human Activity Recognition - Capstone Project](http://nbviewer.jupyter.org/github/MrinalJain17/Human-Activity-Recognition/blob/master/human_activity_recognition.ipynb)
